@@ -1,0 +1,121 @@
+
+
+.calculator {
+    border-radius: 10px;
+    height: 700px;
+    width: 400px;
+    margin: auto;
+    background: black;
+}
+
+.display {
+    height: 230px;
+}
+
+.buttons {
+    padding-inline: 10px;
+}
+
+.myButton {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+#button_AC {
+    color: black;
+    background-color: lightgray;
+}
+
+#button_\+\/- {
+    color: black;
+    background-color: lightgray;
+}
+
+#button_\% {
+    color: black;
+    background-color: lightgray;
+}
+
+#button_\/ {
+    color: white;
+    background-color: orange;
+}
+
+#button_7 {
+    color: white;
+    background-color: gray;
+}
+
+#button_8 {
+    color: white;
+    background-color: gray;
+}
+
+#button_9 {
+    color: white;
+    background-color: gray;
+}
+
+#button_\* {
+    color: white;
+    background-color: orange;
+}
+
+#button_4 {
+    color: white;
+    background-color: gray;
+}
+
+#button_5 {
+    color: white;
+    background-color: gray;
+}
+
+#button_6 {
+    color: white;
+    background-color: gray;
+}
+
+#button_- {
+    color: white;
+    background-color: orange;
+}
+
+#button_1 {
+    color: white;
+    background-color: gray;
+}
+
+#button_2 {
+    color: white;
+    background-color: gray;
+}
+
+#button_3 {
+    color: white;
+    background-color: gray;
+}
+
+#button_\+ {
+    color: white;
+    background-color: orange;
+}
+
+#button_0 {
+    color: white;
+    background-color: gray;
+    border-radius: 50px;
+    width: 185px;
+}
+
+#button_\, {
+    color: white;
+    background-color: gray;
+}
+
+#button_\= {
+    color: white;
+    background-color: orange;
+}
