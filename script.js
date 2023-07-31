@@ -1,4 +1,6 @@
 
-let elem = document.getElementById('button_%');
+let element = document.getElementById("button_AC");
 
-console.log(elem)
+element.addEventListener('click', function(event) {
+    console.log(element.value);
+});
