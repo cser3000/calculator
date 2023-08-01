@@ -55,6 +55,16 @@ function obrabotkaEptb(value) {
         operationF = false;
         elemOutput.innerHTML = '0';
     }
+    else if (value === '+/-') {
+        if (!operationF) {
+            num1 = String(-Number(num1));
+            elemOutput.innerHTML = num1;
+        }
+        else {
+            num2 = String(-Number(num2));
+            elemOutput.innerHTML = num2;
+        }
+    }
 }
 
 let operationF = false;
