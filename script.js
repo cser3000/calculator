@@ -32,14 +32,15 @@ function obrabotkaEptb(value) {
         num2 = num2 + String(value);
         elemOutput.innerHTML = num2;
     }
-    else if (value === '/' || value === '+' || value === '-' || value === '*' && !operationF) {
+    else if ((value === '/' || value === '+' || value === '-' || value === '*') && !operationF) {
         operationF = true;
         operation = value;
+        console.log(operationF)
     }
-    else if (value === '/' || value === '+' || value === '-' || value === '*' && operationF) {
+    else if ((value === '/' || value === '+' || value === '-' || value === '*') && operationF) {
         num1 = calculation(num1, num2, operation);
         operation = value;
-        console.log(num1)
+        num2 = '';
         elemOutput.innerHTML = num1;
     }
     else if (value === "=") {
@@ -53,7 +54,7 @@ function obrabotkaEptb(value) {
         num2 = '';
         operation = '';
         operationF = false;
-        elemOutput.innerHTML = 0;
+        elemOutput.innerHTML = '0';
     }
 }
 
