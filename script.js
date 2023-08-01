@@ -24,18 +24,17 @@ function calculation(n1, n2, z) {
     }
 }
 function obrabotkaEptb(value) {
-    if (Number(value) < 10 && !operationF) {
+    if (Number(value) < 10 && !operationF && (num1[0] || value !== '0')) {
         num1 = num1 + String(value);
         elemOutput.innerHTML = num1;
     }
-    else if (Number(value) < 10) {
+    else if (Number(value) < 10 && (num2[0] || value !== '0')) {
         num2 = num2 + String(value);
         elemOutput.innerHTML = num2;
     }
     else if ((value === '/' || value === '+' || value === '-' || value === '*') && !operationF) {
         operationF = true;
         operation = value;
-        console.log(operationF)
     }
     else if ((value === '/' || value === '+' || value === '-' || value === '*') && operationF) {
         num1 = calculation(num1, num2, operation);
