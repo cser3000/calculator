@@ -18,6 +18,19 @@
     display: inline-block;
     padding-top: 100px;
     padding-left: 50px;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.output::placeholder {
+    color: white;
+}
+
+.output:focus {
+    border: none;
 }
 
 .buttons {

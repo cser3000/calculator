@@ -7,7 +7,17 @@ for (let i = 0; i < element.length; i++) {
     });
 }
 
-let elemOutput = document.querySelector('.output')
+let elemOutput = document.querySelector('.output');
+
+elemOutput.addEventListener('keydown', (e) => {
+    if (e.key === 13 && !operationF) {
+        num1 = elemOutput.value;
+        operationF = !operationF;
+    }
+    else if (e.key === 13) {
+        num2 = elemOutput.value;
+    }
+})
 
 function calculation(n1, n2, z) {
     if (z === '/') {
@@ -26,11 +36,11 @@ function calculation(n1, n2, z) {
 function obrabotkaEptb(value) {
     if (Number(value) < 10 && !operationF && (num1[0] || value !== '0')) {
         num1 = num1 + String(value);
-        elemOutput.innerHTML = num1;
+        elemOutput.value = num1;
     }
     else if (Number(value) < 10 && (num2[0] || value !== '0')) {
         num2 = num2 + String(value);
-        elemOutput.innerHTML = num2;
+        elemOutput.value = num2;
     }
     else if ((value === '/' || value === '+' || value === '-' || value === '*') && !operationF) {
         operationF = true;
@@ -40,11 +50,11 @@ function obrabotkaEptb(value) {
         num1 = calculation(num1, num2, operation);
         operation = value;
         num2 = '';
-        elemOutput.innerHTML = num1;
+        elemOutput.value = num1;
     }
     else if (value === "=") {
         num1 = num2 ? calculation(num1, num2, operation) : num1;
-        elemOutput.innerHTML = num1;
+        elemOutput.value= num1;
         num2 = '';
         operationF = false;
     }
@@ -53,16 +63,16 @@ function obrabotkaEptb(value) {
         num2 = '';
         operation = '';
         operationF = false;
-        elemOutput.innerHTML = '0';
+        elemOutput.value = '0';
     }
     else if (value === '+/-') {
         if (!operationF) {
             num1 = String(-Number(num1));
-            elemOutput.innerHTML = num1;
+            elemOutput.value = num1;
         }
         else {
             num2 = String(-Number(num2));
-            elemOutput.innerHTML = num2;
+            elemOutput.value = num2;
         }
     }
 }
