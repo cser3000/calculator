@@ -10,19 +10,27 @@
 
 .display {
     height: 230px;
+    color: white;
+}
+
+.output {
+    font-size: 30px;
+    display: inline-block;
+    padding-top: 100px;
+    padding-left: 50px;
 }
 
 .buttons {
     padding-inline: 10px;
     display: grid;
-    grid-template-columns: 90px 90px 90px 90px;
-    grid-template-rows: 90px 90px 90px 90px 90px;
+    grid-template-columns:  repeat(4, 90px);
+    grid-template-rows: repeat(5, 90px) ;
     gap: 5px;
 }
 
 .myButton {
     border-radius: 50%;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 #button_AC {
@@ -108,6 +116,8 @@
 #button_0 {
     color: white;
     background-color: gray;
+    grid-column: span 2;
+    border-radius: 70px;
 }
 
 #button_\, {
