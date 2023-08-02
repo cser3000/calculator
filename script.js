@@ -3,21 +3,15 @@ let element = document.getElementsByClassName('myButton');
 
 for (let i = 0; i < element.length; i++) {
     element[i].addEventListener('click', () => {
-        obrabotkaEptb(element[i].value)
+        handlingClick(element[i].value)
     });
 }
 
-let elemOutput = document.querySelector('.output');
-
-elemOutput.addEventListener('keydown', (e) => {
-    if (e.key === 13 && !operationF) {
-        num1 = elemOutput.value;
-        operationF = !operationF;
-    }
-    else if (e.key === 13) {
-        num2 = elemOutput.value;
-    }
+document.addEventListener("keydown", (e) => {
+    handlingKeydown(e);
 })
+
+let elemOutput = document.querySelector('.output');
 
 function calculation(n1, n2, z) {
     if (z === '/') {
@@ -33,7 +27,8 @@ function calculation(n1, n2, z) {
         return String( Number(n1) * Number(n2));
     }
 }
-function obrabotkaEptb(value) {
+
+function handlingClick(value) {
     if (Number(value) < 10 && !operationF && (num1[0] || value !== '0')) {
         num1 = num1 + String(value);
         elemOutput.value = num1;
@@ -54,7 +49,7 @@ function obrabotkaEptb(value) {
     }
     else if (value === "=") {
         num1 = num2 ? calculation(num1, num2, operation) : num1;
-        elemOutput.value= num1;
+        elemOutput.value = num1;
         num2 = '';
         operationF = false;
     }
@@ -63,7 +58,7 @@ function obrabotkaEptb(value) {
         num2 = '';
         operation = '';
         operationF = false;
-        elemOutput.value = '0';
+        elemOutput.value = '';
     }
     else if (value === '+/-') {
         if (!operationF) {
@@ -74,6 +69,18 @@ function obrabotkaEptb(value) {
             num2 = String(-Number(num2));
             elemOutput.value = num2;
         }
+    }
+}
+
+function handlingKeydown(e) {
+    let code = e.keyCode
+    if (code >= 48 && code <= 57 && !operationF && (num1[0] || code !== 48)) {
+        num1 = num1 + (code - 48);
+        elemOutput.value = num1;
+    }
+    else if (code >= 48 && code <= 57 && operationF && (num2[0] || code !== 48)) {
+        num2 = num2 + (code - 48);
+        elemOutput.value = num2;
     }
 }
 
