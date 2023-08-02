@@ -37,7 +37,7 @@
 .buttons {
     padding-inline: 10px;
     display: grid;
-    grid-template-columns:  repeat(4, 90px);
+    grid-template-columns: repeat(4, 90px);
     grid-template-rows: repeat(5, 90px) ;
     gap: 5px;
 }
@@ -47,99 +47,40 @@
     font-size: 30px;
 }
 
-#button_AC {
-    color: black;
-    background-color: lightgray;
-}
-
-#button_\+\/- {
-    color: black;
-    background-color: lightgray;
-}
-
+#button_AC,
+#button_\+\/-,
 #button_\% {
     color: black;
     background-color: lightgray;
 }
 
-#button_\/ {
+
+#button_\/,
+#button_\*,
+#button_-,
+#button_\+,
+#button_\= {
     color: white;
     background-color: orange;
 }
 
-#button_7 {
-    color: white;
-    background-color: gray;
-}
-
-#button_8 {
-    color: white;
-    background-color: gray;
-}
-
-#button_9 {
-    color: white;
-    background-color: gray;
-}
-
-#button_\* {
-    color: white;
-    background-color: orange;
-}
-
-#button_4 {
-    color: white;
-    background-color: gray;
-}
-
-#button_5 {
-    color: white;
-    background-color: gray;
-}
-
-#button_6 {
-    color: white;
-    background-color: gray;
-}
-
-#button_- {
-    color: white;
-    background-color: orange;
-}
-
-#button_1 {
-    color: white;
-    background-color: gray;
-}
-
-#button_2 {
-    color: white;
-    background-color: gray;
-}
-
-#button_3 {
-    color: white;
-    background-color: gray;
-}
-
-#button_\+ {
-    color: white;
-    background-color: orange;
-}
-
-#button_0 {
-    color: white;
-    background-color: gray;
-    grid-column: span 2;
-    border-radius: 70px;
-}
-
+#button_0,
+#button_1,
+#button_2,
+#button_3,
+#button_4,
+#button_5,
+#button_6,
+#button_7,
+#button_8,
+#button_9,
 #button_\. {
     color: white;
     background-color: gray;
 }
 
-#button_\= {
-    color: white;
-    background-color: orange;
+
+#button_0 {
+    grid-column: span 2;
+    border-radius: 70px;
 }
