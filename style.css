@@ -45,6 +45,7 @@
 .myButton {
     border-radius: 50%;
     font-size: 30px;
+    border: none;
 }
 
 #button_AC,
@@ -54,6 +55,11 @@
     background-color: lightgray;
 }
 
+#button_AC:active,
+#button_\+\/-:active,
+#button_\%:active {
+    background-color: white;
+}
 
 #button_\/,
 #button_\*,
@@ -62,6 +68,15 @@
 #button_\= {
     color: white;
     background-color: orange;
+}
+
+#button_\/:active,
+#button_\*:active,
+#button_-:active,
+#button_\+:active,
+#button_\=:active {
+    color: orange;
+    background-color: white;
 }
 
 #button_0,
@@ -79,6 +94,20 @@
     background-color: gray;
 }
 
+#button_0:active,
+#button_1:active,
+#button_2:active,
+#button_3:active,
+#button_4:active,
+#button_5:active,
+#button_6:active,
+#button_7:active,
+#button_8:active,
+#button_9:active,
+#button_\.:active {
+    color: white;
+    background-color: darkgray;
+}
 
 #button_0 {
     grid-column: span 2;
