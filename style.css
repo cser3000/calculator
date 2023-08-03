@@ -9,34 +9,38 @@
 }
 
 .display {
-    height: 230px;
+    height: 200px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .output {
     font-size: 30px;
-    display: inline-block;
-    margin-top: 100px;
-    margin-left: 50px;
+    display: block;
     color: white;
     background-color: black;
     border: none;
     width: 300px;
-    border-radius: 10px;
     height: 50px;
+    border-radius: 10px;
+    text-align: right;
 }
 
 .output::placeholder {
     color: white;
 }
 
-.output:focus {
-    border: 5px;
+.output:focus-visible {
+    outline: 0;
 }
 
 .buttons {
-    padding-inline: 10px;
+    margin: auto;
     display: grid;
+    width: 380px;
+    height: 480px;
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: repeat(5, 90px) ;
     gap: 5px;
