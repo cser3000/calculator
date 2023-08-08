@@ -55,9 +55,6 @@ const signChange = (a) => {
 }
 
 function handlingClick(value) {
-    console.log('num1',num1)
-    console.log('num2', num2)
-    console.log(Number(value) ? ' ' : value)
     if (Number(value) + 1) {
         if (!operationF) {
             num1 = addingNumbers(num1, value);
